@@ -156,14 +156,14 @@
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .flex-vertical { display: flex; flex-direction: column; gap: 15px; }
 
-        /* Estrutura padrão para PC (Lado a lado) */
+        
         .reino-container {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
             gap: 20px;
         }
 
-        /* Painel do QRCode */
+      
         .qrcode-panel {
             background: var(--navy-light);
             border: 3px double var(--border-color);
@@ -202,13 +202,13 @@
             color: var(--gold);
         }
 
-        /* 🚨 REGRA FORTE PARA CELULAR: SE A TELA FOR MENOR QUE 768PX, O QRCODE SUMIRÁ COMPLETAMENTE */
-        @media (max-width: 768px) {
+       
+        @media (max-width: 992px) {
             .reino-container {
-                grid-template-columns: 1fr !important; /* Faz os botões ocuparem a tela toda */
+                grid-template-columns: 1fr !important;
             }
             .qrcode-panel {
-                display: none !important; /* O '!important' força o sumiço do QRCode no celular */
+                display: none !important; 
             }
         }
 
@@ -315,7 +315,6 @@
             text-align: center;
         }
 
-        /* ESTILOS DA NOVA JANELA MODAL DE RECORDE */
         .modal-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -535,7 +534,7 @@
             {p: "Qual é o rio mais extenso do mundo?", o: ["Rio Nilo", "Rio Amazonas", "Rio Mississipi", "Rio Yangtzé"], r: 1},
             {p: "A linha imaginária que divide a Terra em Norte e Sul é:", o: ["Meridiano de Greenwich", "Trópico de Câncer", "Linha do Equador", "Círculo Polar Ártico"], r: 2},
             {p: "Qual país possui a maior população do mundo atualmente?", o: ["Estados Unidos", "Índia", "China", "Indonésia"], r: 1},
-            {p: "O processo de desertificação é mais common em qual clima?", o: ["Equatorial", "Semiárido", "Polar", "Temperado"], r: 1},
+            {p: "O processo de desertificação é mais comum em qual clima?", o: ["Equatorial", "Semiárido", "Polar", "Temperado"], r: 1},
             {p: "Qual continente é conhecido como o 'berço da humanidade'?", o: ["Ásia", "Europa", "África", "América"], r: 2},
             {p: "O que caracteriza o movimento de Translação da Terra?", o: ["Giro no próprio eixo", "Giro em torno da Lua", "Giro em torno do Sol", "Giro das marés"], r: 2},
             {p: "Qual destes é um país transcontinental?", o: ["Turquia", "Japão", "Brasil", "Austrália"], r: 0}
@@ -699,7 +698,6 @@
         return "🌱 Camponês Novato (Pratique mais aventuras!)";
     }
 
-    // CONTROLE DO MODAL CUSTOMIZADO
     function openRecordModal() {
         document.getElementById('player-name-input').value = "";
         document.getElementById('record-modal').classList.remove('hidden');
